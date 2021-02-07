@@ -3,3 +3,6 @@ HTML5 and CSS3 Playground
 
 ### app1 ###
 ### https://www.npmjs.com/package/create-html5-boilerplate ###
+
+### app2 ###
+### s.com/package/html5-boilerplate ###
