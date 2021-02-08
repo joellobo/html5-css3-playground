@@ -12,47 +12,44 @@
   <meta property="og:url" content="">
   <meta property="og:image" content="">
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="apple-touch-icon" href="/icon.83aa3da3.png">
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="/normalize.1114379f.css">
+  <link rel="stylesheet" href="/main.c52e0fe2.css">
 
   <meta name="theme-color" content="#fafafa">
 
-  <script src="js/view.js"></script>
+  <script src="/view.2090db12.js"></script>
 
-  <script>
-    function carregar() {
-      console.log('carregando')
-    }
+  <script>function carregar() {
+  console.log('carregando');
+}
 
-  function sortear() {
-    console.log('sorteando...')
-    const letra = selecionarLetra()
-    console.log(`Letra selecionada: ${letra}`)
-  }
+function sortear() {
+  console.log('sorteando...');
+  var letra = selecionarLetra();
+  console.log("Letra selecionada: ".concat(letra));
+}
 
-  function selecionarLetra(length) {
-   var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-   var charactersLength = characters.length
-   const index = getRandomArbitrary(0, characters.length)
-   const result = characters.charAt(index)
-   return result
+function selecionarLetra(length) {
+  var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var charactersLength = characters.length;
+  var index = getRandomArbitrary(0, characters.length);
+  var result = characters.charAt(index);
+  return result;
 }
 
 function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
-}
+}</script>
 
-  </script>
+<script src="/normalize.1114379f.js"></script><script src="/main.c52e0fe2.js"></script></head>
 
-</head>
+<body onload="carregar()">
 
-<body onload='carregar()'>
-
-  <p><h1>Stop</h1></p>
+  <p></p><h1>Stop</h1><p></p>
 
   <p><button onclick="sortear()" class="btn-sortear" value="sortear" name="sortear">Sortear!</button></p>
 
@@ -87,17 +84,23 @@ function getRandomArbitrary(min, max) {
 
 
 
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+  <script src="/modernizr-3.11.2.min.659b9f56.js"></script>
+  <script src="/plugins.7f97feee.js"></script>
+  <script src="/main.fb6bbcaf.js"></script>
 
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+  <script>window.ga = function () {
+  ga.q.push(arguments);
+};
+
+ga.q = [];
+ga.l = +new Date();
+ga('create', 'UA-XXXXX-Y', 'auto');
+ga('set', 'anonymizeIp', true);
+ga('set', 'transport', 'beacon');
+ga('send', 'pageview');</script>
+  <script src="https://www.google-analytics.com/analytics.js" async=""></script>
 </body>
 
 </html>

@@ -10,5 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "create-html5-boilerplate": "^0.3.0"
+  },
+  "devDependencies": {
+    "http-server": "^0.12.3"
   }
 }
