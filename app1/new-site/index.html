@@ -24,14 +24,19 @@
   <script src="js/view.js"></script>
 
   <script>
+    let letrasSorteadas = []
     function carregar() {
       console.log('carregando')
     }
 
   function sortear() {
-    console.log('sorteando...')
     const letra = selecionarLetra()
-    console.log(`Letra selecionada: ${letra}`)
+
+    if (!letrasSorteadas.includes(letra)) {
+      atualizar('.letra-selecionada', letra)
+      atualizar('.letras-sorteadas', letrasSorteadas.sort())
+      letrasSorteadas.push(letra)
+    }
   }
 
   function selecionarLetra(length) {
@@ -46,17 +51,39 @@ function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-  </script>
+function limpar() {
+  letrasSorteadas = []
+  atualizar('.letras-sorteadas', letrasSorteadas)
+  atualizar('.letra-selecionada', '')
+}
+
+function atualizar(_class, _valor) {
+  const spanLetraSorteada = document.querySelector(_class)
+  spanLetraSorteada.innerHTML = _valor
+}
+</script>
 
 </head>
 
 <body onload='carregar()'>
 
-  <p><h1>Stop</h1></p>
+  <div class="principal">
 
-  <p><button onclick="sortear()" class="btn-sortear" value="sortear" name="sortear">Sortear!</button></p>
+    <h1>Stop</h1>
 
-  <button value="sortear" name="sortear">A</button>
+    <p><button onclick="sortear()" class="btn-sortear" value="sortear" name="sortear">Sortear Letra!</button></p>
+
+    <p><button onclick="limpar()" class="btn-sortear" value="sortear" name="sortear">Limpar</button></p>
+
+    <span class="letra-selecionada"></span>
+<br/>
+    <span class="letras-sorteadas"></span>
+
+  </div>
+
+
+
+  <!-- <button value="sortear" name="sortear">A</button>
   <button value="sortear" name="sortear">B</button>
   <button value="sortear" name="sortear">C</button>
   <button value="sortear" name="sortear">D</button>
@@ -81,7 +108,7 @@ function getRandomArbitrary(min, max) {
   <button value="sortear" name="sortear">W</button>
   <button value="sortear" name="sortear">X</button>
   <button value="sortear" name="sortear">Y</button>
-  <button value="sortear" name="sortear">Z</button>
+  <button value="sortear" name="sortear">Z</button> -->
 
 
 
